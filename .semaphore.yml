@@ -15,7 +15,8 @@ blocks:
             - SECRET_ONE
         - name: another-mihalis-secrets
           env_var_names:
- #       - name: does-not-exist
- #         env_var_names:
- #           - SECRET_ONE
+            - SECRET_ONE
+        - name: does-not-exist
+          env_var_names:
+            - SECRET_ONE
 
