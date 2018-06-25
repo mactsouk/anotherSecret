@@ -13,4 +13,7 @@ blocks:
         - name: more-mihalis-secrets
           env_var_names:
             - SECRET_ONE
+        - name: another-mihalis-secrets
+          env_var_names:
+            - SECRET_ONE
 
