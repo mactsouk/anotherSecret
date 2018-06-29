@@ -7,9 +7,10 @@ blocks:
     build:
       prologue:
         commands:
-          - checkout && cd $SEMAPHORE_GIT_DIR
+          - checkout
       epilogue:
         commands:
+          - pwd
           - echo $SEMAPHORE_JOB_RESULT
           - echo "Yay job finished"
       env_vars:
@@ -36,7 +37,6 @@ blocks:
       - name: Echo job
         commands:
           - checkout
-          - cd $SEMAPHORE_GIT_DIR
           - pwd
           - echo $SEMAPHORE_PIPELINE_ID
           - echo "Hello from $SEMAPHORE_JOB_ID"
