@@ -1,42 +1,19 @@
-
-version: "v3.0"
-name: My first pipeline
+version: "v1.0"
+name: Using secrets in Semaphore 2.0
 semaphore_image: standard
 blocks:
-  - name: "Stage 1"
-    build:
-      prologue:
-        commands:
-          - checkout
-      epilogue:
-        commands:
-          - pwd
-          - echo $SEMAPHORE_JOB_RESULT
-          - echo "Yay job finished"
-      env_vars:
-        - name: VAR1
-          value: Environment Variable 1
-        - name: PI
-          value: "3.14159"
+- build:
       jobs:
-      - name: Just ls
-        commands:
-          - pwd
-          - echo "test"
-          - ls /etc
+        - name: My Semaphore 2.0 job
+          commands:
+            - echo "Hello World!"
+            - echo $SECRET_ONE
+            - echo $SEMAPHORE_PIPELINE_ID
+      secrets:
+        - name: more-mihalis-secrets
+          env_var_names:
+            - SECRET_ONE
+ #       - name: does-not-exist
+ #         env_var_names:
+ #           - SECRET_ONE
 
-      - name: List files
-        commands:
-          - echo "First env var -> $VAR1"
-          - echo "My files:"
-          - ls -lah
-
-  - name: "Stage 2"
-    build:
-      jobs:
-      - name: Echo job
-        commands:
-          - checkout
-          - pwd
-          - echo $SEMAPHORE_PIPELINE_ID
-          - echo "Hello from $SEMAPHORE_JOB_ID"
