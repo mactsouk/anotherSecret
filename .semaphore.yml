@@ -12,5 +12,5 @@ blocks:
       secrets:
         - name: mihalis-secrets
           env_var_names: []
-#        - name: mySecrets
-#          env_var_names: []
+        - name: mySecrets
+          env_var_names: []
