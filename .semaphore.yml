@@ -10,7 +10,7 @@ blocks:
             - echo $SECRET_ONE
             - echo $SEMAPHORE_PIPELINE_ID
       secrets:
-        - name: mihalis-secrets
-          env_var_names: []
         - name: mySecrets
+          env_var_names: []
+        - name: mihalis-secrets
           env_var_names: []
