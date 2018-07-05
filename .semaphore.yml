@@ -1,16 +1,17 @@
 version: "v1.0"
-name: Using secrets in Semaphore 2.0
+name: Basic YAML configuration file example.
 semaphore_image: standard
 blocks:
   - build:
       jobs:
         - name: My Semaphore 2.0 job
           commands:
+            - echo $SEMAPHORE_PIPELINE_ID
             - echo "Hello World!"
             - echo $SECRET_ONE
-            - echo $SEMAPHORE_PIPELINE_ID
+            - echo $SECRET_TWO
       secrets:
-        - name: mySecrets
+        - name: more-mihalis-secrets
           env_var_names: []
-        - name: mihalis-secrets
+        - name: mySecrets
           env_var_names: []
