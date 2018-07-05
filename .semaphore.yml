@@ -11,7 +11,7 @@ blocks:
             - echo $SECRET_ONE
             - echo $SECRET_TWO
       secrets:
-        - name: more-mihalis-secrets
-          env_var_names: []
         - name: mySecrets
+          env_var_names: []
+        - name: more-mihalis-secrets
           env_var_names: []
