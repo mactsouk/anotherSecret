@@ -6,6 +6,7 @@ blocks:
       jobs:
         - name: My Semaphore 2.0 job
           commands:
+            - checkout
             - echo $SEMAPHORE_PIPELINE_ID
             - echo "Hello World!"
             - echo $SECRET_ONE
