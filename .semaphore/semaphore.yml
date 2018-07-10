@@ -9,8 +9,8 @@ blocks:
             - checkout
             - ls -l .semaphore
             - echo $SEMAPHORE_PIPELINE_ID
-            - echo $SECRET_ONE
             - echo $SECRET_TWO
+            - echo $SECRET_ONE
       secrets:
         - name: mySecrets
           env_var_names: []
