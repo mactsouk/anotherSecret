@@ -10,7 +10,6 @@ blocks:
             - ls -l .semaphore
             - echo $SEMAPHORE_PIPELINE_ID
             - echo $SECRET_ONE
-            - sudo apt-get install hugo
             - echo $SECRET_TWO
       secrets:
         - name: mySecrets
