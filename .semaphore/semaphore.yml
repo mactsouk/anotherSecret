@@ -2,18 +2,18 @@ version: "v1.0-beta-task"
 name: Basic YAML configuration file example.
 semaphore_image: standard
 blocks:
-  -name: My Task
-   task:
-      jobs:
-        - name: My Semaphore 2.0 job
-          commands:
-            - checkout
-            - ls -l .semaphore
-            - echo $SEMAPHORE_PIPELINE_ID
-            - echo $SECRET_ONE
-            - echo $SECRET_TWO
-      secrets:
-        - name: mySecrets
-          env_var_names: []
-        - name: more-mihalis-secrets
-          env_var_names: []
+  - name: My Task
+     task:
+       jobs:
+         - name: My Semaphore 2.0 job
+           commands:
+             - checkout
+             - ls -l .semaphore
+             - echo $SEMAPHORE_PIPELINE_ID
+             - echo $SECRET_ONE
+             - echo $SECRET_TWO
+       secrets:
+         - name: mySecrets
+           env_var_names: []
+         - name: more-mihalis-secrets
+           env_var_names: []
