@@ -2,7 +2,8 @@ version: "v1.0"
 name: Basic YAML configuration file example.
 semaphore_image: standard
 blocks:
-  - build:
+  -name: My Task
+   task:
       jobs:
         - name: My Semaphore 2.0 job
           commands:
