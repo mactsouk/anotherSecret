@@ -1,4 +1,4 @@
-version: "v1.0"
+version: "v1.0-beta-task"
 name: Basic YAML configuration file example.
 semaphore_image: standard
 blocks:
